@@ -1,0 +1,15 @@
+// CLASSES 
+Base Theme Format: main-[class name]
+Child Theme Format: [class name]
+Section Class Format: page-layout [secondary class or custom class]
+
+// IMAGE FORMAT
+<figure>
+	<img src="" alt="" class="">
+	<figcaption></figcaption>
+</figure>
+
+Note: Always put image in a "figure" DOM
+
+// THEME OPTIONS SLUG
+opt_[label]

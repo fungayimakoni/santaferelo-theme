@@ -1,0 +1,94 @@
+/* These styles are used in the backend editor AND in the Theme (frontend) */
+
+/* CSS is provided by the theme itself, and modified by any custom css you add to the theme. */
+/* But that CSS is not active when using the backend-editor, so here is a good place to put  */
+/* any custom css which should be active in the frontend website and also applied to editor. */
+/* The goal is to make the visual editor display as like the final frontend view as possible */
+/* so do not forget to configure the TinyMCE styles dropdown with elements to match these.   */
+
+/* Suggested general non-tag-specific visual styles (for all websites) */
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('fonts/font-helveticaneue/HelveticaNeueLTW06-55Roman.eot?#iefix');
+    src: url('fonts/font-helveticaneue/HelveticaNeueLTW06-55Roman.eot?#iefix') format('eot'),
+         url('fonts/font-helveticaneue/HelveticaNeueLTW06-55Roman.woff2') format('woff2'),
+         url('fonts/font-helveticaneue/HelveticaNeueLTW06-55Roman.woff') format('woff'),
+         url('fonts/font-helveticaneue/HelveticaNeueLTW06-55Roman.ttf') format('truetype');
+}
+
+.list       { margin: 0.35rem 0; }
+.stdtop     { margin-top: 0.65rem !important; }
+.moretop    { margin-top: 0.8rem  !important; }
+.lotstop    { margin-top: 1rem    !important; }
+.hugetop    { margin-top: 1.3rem  !important; }
+.stdbottom  { margin-bottom: 0.65rem !important; }
+.morebottom { margin-bottom: 0.8rem  !important; }
+.lotsbottom { margin-bottom: 1rem    !important; }
+.hugebottom { margin-bottom: 1.3rem  !important; }
+
+.topless    { margin-top: 0 !important; }
+.bottomless { margin-bottom: 0 !important; }
+
+.beforelist { margin-bottom: 0.3rem; }
+
+.lastitempx { padding-bottom: 12px !important; }
+.lastitemem { margin-bottom: 0; padding-bottom: 1.3rem; }
+
+strong, .strong, .fett, .bold, .smallBold, .smallerBold { font-weight: bold; }
+
+/* Revert to normal text within strong */
+.notstrong { font-weight: normal; }
+
+.smaller, .smallerBold { font-size: 0.95rem; line-height: 1.25; }
+
+.small, .smallBold { font-size: 0.89rem; line-height: 1.2; }
+
+/* Append your site-specific styles here */
+h1, h2, h3, h4, h5, h6, p{
+	font-family: HelveticaNeue;
+	color: #353c41;
+}
+h6{
+	font-size: 16px;
+}
+h5{
+	font-size: 18px;
+}
+h4{
+	font-size: 19px;
+	font-weight: bold;
+	line-height: 1.42;
+}
+h3{
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1.17;
+}
+h2{
+	font-size: 31px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.1;
+    letter-spacing: normal;
+}
+h1{
+	font-size: 38px;
+	font-weight: bold;
+	line-height: 1.11;
+}
+.author-content ul, .content-block ul, .content-block ol, .page-banner + .container ul, .page-banner + .container + .container ul{
+  list-style: none;
+  margin-bottom: 1rem;
+}
+ul ~ ul, ul ~ ol, ol ~ ul, ol ~ ol {
+  margin-top: 15px;
+}
+ul li p ~ ul, ul li p ~ ol, ol li p ~ ul, ol li p ~ ol {
+  margin-top: 0;
+}
+.author-content ul li:before, .content-block ul li:before, .page-banner + .container ul li:before, .page-banner + .container + .container ul li:before{
+  content: "+";
+  padding-right: 4px;
+  margin-left: -20px;
+}

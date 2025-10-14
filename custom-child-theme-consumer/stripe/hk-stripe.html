@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Stripe</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Load Stripe.js on your website. --> 
+		<script src="https://js.stripe.com/v3/"></script>
+		<script>
+		  function getParam(p) {
+		    var match = RegExp("[?&]" + p + "=([^&]*)").exec(window.location.search);
+		    return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+		  }
+
+		  var stripe = Stripe("pk_live_UDyJvIPgsYsteK7Z7NKT0NcS00DHQc0LO0");
+
+		  stripe
+		    .redirectToCheckout({
+		      // Make the id field from the Checkout Session creation API response
+		      // available to this file, so you can provide it as parameter here
+		      // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
+		      sessionId: getParam("session_id")
+		    })
+		    .then(function(result) {
+		      // If `redirectToCheckout` fails due to a browser or network
+		      // error, display the localized error message to your customer
+		      // using `result.error.message`.
+			  document.getElementById("error").innerHTML = result.error.message;
+		    });
+		</script>
+    </head>
+    <body>
+		
+		<div id="error"></div>
+    </body>
+</html>

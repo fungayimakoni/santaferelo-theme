@@ -1,0 +1,1243 @@
+@import "./responsive";
+
+.page-template-template-frontpage2020 {
+    .top-header {
+        nav {
+            .uk-navbar-nav:not(#menu-top-menu-right-2019) {
+                #menu-item-7456 {
+                    a {
+                        &::after {
+                            border: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    padding-top: 180px !important;
+
+    @include breakpoints(0px, ipad) {
+        padding-top: 132px !important;
+    }
+}
+
+body.home .top-header nav .uk-navbar-nav li.parent-active a:hover ::after {
+    border-bottom: none !important;
+}
+
+.page-template .top-header nav .uk-navbar-nav:not(#menu-corporate-top-navigation-right)>li>a:hover:after {
+    border: none;
+}
+
+body .top-header nav .uk-navbar-nav li.parent-active a:after {}
+
+body .top-header nav .uk-navbar-nav li.parent-active a:hover:after {
+    border: none;
+}
+
+.top-header nav .uk-navbar-nav>li>a {
+    color: #FFF !important;
+}
+
+.banner-top-new {
+    background-color: #005BAA;
+
+    font-family: 'HelveticaNeue';
+    font-size: 16px;
+    font-weight: normal;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    overflow: hidden;
+    transition: height 1.5s ease-in;
+
+    &.shown {
+        height: 56px;
+    }
+
+    p {
+        color: white;
+
+        strong {
+            font-weight: 600;
+
+        }
+
+        a {
+            color: white;
+            font-weight: 600;
+
+        }
+
+        @include breakpoints(0px, ipad) {
+            font-size: 14px;
+            display: inline-block;
+            text-align: center;
+            padding: .5rem 1rem;
+            height: auto;
+        }
+    }
+
+}
+
+.zf-templateWrapper {
+    span {
+        color: #FFF;
+    }
+}
+
+
+
+.sanelo-frontpage {
+    position: relative;
+
+    .zf-templateWidth {
+        width: 965px !important;
+
+        @include breakpoints(0px, ipad) {
+            width: 100% !important;
+        }
+
+        max-width: 965px;
+    }
+
+    .uk-background-cover {
+        position: relative;
+
+        .gradient {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 56px;
+
+            @include breakpoints(0px, ipad) {
+                bottom: 75px;
+            }
+
+            z-index: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.476) 2.11%, rgba(83, 83, 83, 0.371) 65.9%, rgba(141, 141, 141, 0.273) 83.5%, rgba(196, 196, 196, 0) 100%);
+        }
+    }
+
+    .banner-container {
+        z-index: 1;
+        width: 100%;
+
+        .tab_h2,
+        .tab_h {
+            color: white !important;
+
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        span {
+            color: white !important;
+            font-size: 15px !important;
+            font-weight: 700;
+            margin-bottom: 65px;
+        }
+
+        .zf-labelName {
+            color: white !important;
+            font-size: 15px !important;
+
+            @include breakpoints(0px, ipad) {
+                display: none;
+            }
+        }
+
+        .tab {
+            padding-top: 35px;
+
+            @include breakpoints(0px, ipad) {
+                padding: 0;
+
+            }
+        }
+
+        h1 {
+            margin-bottom: 16px;
+            padding: 0;
+
+            @include breakpoints(0px, ipad) {
+                margin-bottom: 30px;
+            }
+
+        }
+
+        #moving-date {
+            padding-top: 0;
+
+            #movedate,
+            #movedate2,
+            #movedate3 {
+                margin-bottom: 0;
+            }
+
+            .nxtprev_but {
+                a {
+                    height: 54px;
+                }
+            }
+        }
+
+        span {
+            margin-bottom: 65px;
+
+            @include breakpoints(0px, ipad) {
+                margin-bottom: 50px;
+            }
+        }
+
+        label.zf-labelName {
+            display: none;
+        }
+
+        #aboutmove {
+            padding-top: 0;
+        }
+
+        #tab3 {
+            h1 {
+                margin-bottom: 65px;
+            }
+
+        }
+
+        #sizeofmove {
+            padding-top: 0;
+
+            .bedrooms_sel {
+                display: flex;
+                /* width: 100%; */
+                justify-content: space-between;
+
+                .zf-multiAttType {
+                    width: 100%;
+                    max-width: 139px;
+                    margin: 0;
+
+                    @include breakpoints(0px, ipad) {
+                        max-width: 47%;
+                        box-sizing: border-box;
+                        margin-bottom: 30px;
+
+                        &:nth-child(odd) {
+                            margin-right: 0.5rem;
+                        }
+
+                        &:nth-child(even) {
+                            margin-left: 0.5rem;
+                        }
+
+                        .zf-radioChoice {
+                            line-height: 48px;
+                        }
+
+                    }
+
+                }
+
+                @include breakpoints(0px, ipad) {
+                    .opt_sep {
+                        line-height: 1;
+                        margin-bottom: 30px;
+                    }
+
+                    flex-wrap: wrap;
+                    width: 100%;
+                    margin-bottom: 0;
+
+                }
+            }
+
+            .seperator {
+                margin: 0 !important;
+            }
+
+            .fewbox_sp {
+                span {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .form-group {
+                @include breakpoints(0px, ipad) {
+                    margin-bottom: 0 !important;
+                }
+            }
+
+
+        }
+
+        .form-group {
+            margin-bottom: 30px !important;
+
+            &.fewbox_sp {
+                margin-top: 62px;
+
+                @include breakpoints(0px, ipad) {
+                    margin-top: 0;
+                }
+
+                .zf-labelName {
+                    margin-bottom: 30px;
+                    padding: 0;
+                }
+            }
+        }
+
+        div#personal_information {
+            .zf-labelName {
+                display: none;
+            }
+
+            .uk-grid {
+                margin-top: 0;
+            }
+
+            .zf-phwrapper span {
+                margin-bottom: 0 !important;
+            }
+
+            .confirmation {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .uk-grid-margin,
+            .uk-grid {
+                @include breakpoints(0px, ipad) {
+                    margin-top: 0 !important;
+
+
+                }
+            }
+
+            .form-group {
+                margin-bottom: 30px;
+
+                @include breakpoints(0px, ipad) {
+                    margin-bottom: 30px !important;
+
+                }
+            }
+
+            @include breakpoints(0px, ipad) {
+                .nxtprev_but {
+                    margin-top: 30px !important;
+
+                    a {
+                        height: 54px;
+                    }
+                }
+            }
+
+        }
+
+        #SingleLine2 {
+            @include breakpoints(0px, ipad-pro) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .container.uk-flex.uk-flex-center.uk-flex-middle {
+        @include breakpoints(0px, ipad) {
+            height: auto !important;
+            padding-top: 68px;
+            padding-bottom: 20px;
+        }
+    }
+
+}
+
+#ip-check .uk-grid>.uk-grid-margin {
+    margin-top: 0;
+
+    @include breakpoints(0px, ipad) {
+        margin-top: 0 !important;
+    }
+}
+
+.home .banner-container h1 {
+    color: #FFF;
+
+    @include breakpoints(0px, ipad) {
+        font-size: 31px;
+        // margin-top: 85px;
+    }
+
+}
+
+.home #ip-check #tab1 .uk-first-column span {
+    color: #FFF !important;
+
+}
+
+#menu-topbar {
+    li {
+        @include breakpoints(0px, ipad) {
+            &:not(.cta-top) {
+                display: none;
+            }
+
+        }
+    }
+}
+
+#nextBtn {
+    @include breakpoints(0px, ipad) {
+        width: 100%;
+    }
+}
+
+.november-zoho-frontpage .banner .container {
+    height: 750px !important;
+
+}
+
+.container-fluid.default-container.banner.uk-background-cover {
+    @include breakpoints(0px, ipad) {
+        background-image: url('./img/mobile-banner.png') !important;
+        // background-size: 260% 100%;
+
+        // background-position-x: 64% !important;
+        background-position-y: center !important;
+        min-height: 610px;
+
+    }
+}
+
+.headline {
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    background-color: rgba(0, 0, 0, .7);
+    mix-blend-mode: unset;
+    color: white;
+
+    @include breakpoints(0px, ipad) {
+        display: none;
+    }
+}
+
+#menu-topbar {
+    li {
+        &.cta-top {
+            background-color: red;
+        }
+
+        a {
+            &:after {
+                border: none !important;
+            }
+        }
+    }
+}
+
+.content-wrapper {
+    color: #000;
+
+    section {
+        &:last-child {
+            &:not(.accordion) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+
+    section#column_block_image-1 {
+        padding: 93px 0 132px;
+
+        @include breakpoints(0px, ipad) {
+            padding: 50px 0 30px;
+        }
+    }
+
+    section#column_block_image-2 {
+        padding: 60px 0 0;
+        background-image: none;
+
+        @include breakpoints(0px, ipad) {
+            padding: 20px 0 0;
+        }
+
+        .container {
+            .blocks {
+                .card {
+                    .card-container {
+                        @include breakpoints(0px, ipad) {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .cta-container {
+                @include breakpoints(0px, ipad) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .column_block_image {
+
+        padding: 90px 0 132px;
+
+        @include breakpoints(0px, ipad) {
+            padding: 20px 0 30px;
+        }
+
+        background-image: url(img/bottom-border.png);
+        background-position-y: bottom;
+        background-position-x: center;
+        background-repeat: no-repeat;
+
+        &.thank-you {
+            background-image: none;
+            background-color: #F0F5F8;
+
+            .container {
+                .logo {
+                    margin-bottom: 100px;
+                    display: flex;
+                    justify-content: center;
+
+                    @include breakpoints(0px, ipad) {
+                        height: 56px;
+                        margin-bottom: 50px;
+                        margin-top: 50px;
+                    }
+                }
+
+                .text {
+                    font-size: 16px;
+                    font-weight: bold;
+                    line-height: 24px;
+                    text-align: center;
+                    max-width: 965px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 60px;
+
+                    @include breakpoints(0px, ipad) {
+                        margin-bottom: 50px;
+                    }
+
+                }
+
+                .section-title {
+                    font-size: 32px;
+                    line-height: 38px;
+
+                    @include breakpoints(0px, ipad) {
+                        font-size: 31px !important;
+                        line-height: 34px !important;
+                    }
+
+                    color: #000;
+                    font-weight: 700;
+                    text-align: center;
+                    margin-bottom: 70px;
+
+                    @include breakpoints(0px, ipad) {
+                        margin-bottom: 50px;
+                        font-size: 24px;
+                        line-height: 28px;
+                    }
+
+                    &.thank {
+                        margin-bottom: 30px;
+                    }
+
+                }
+
+                .blocks {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    text-align: center;
+
+                    @include breakpoints(0px, ipad) {
+                        flex-direction: column;
+                    }
+
+                    .card {
+                        max-width: 550px;
+
+                        .card-image {
+                            img {
+                                object-fit: cover;
+                                width: 100%;
+                                height: 367px;
+                            }
+                        }
+
+                        @include breakpoints(0px, ipad) {
+                            margin-bottom: 50px;
+                        }
+
+                        .card-container {
+                            h3 {
+                                font-size: 24px;
+                                line-height: 28px;
+                                font-weight: 700;
+                                margin-top: 60px;
+                                margin-bottom: 9px;
+                                color: #000;
+
+                                @include breakpoints(0px, ipad) {
+                                    font-size: 18px;
+                                    line-height: 21px;
+                                    margin-top: 30px;
+                                    margin-bottom: 30px;
+                                }
+                            }
+
+                            p {
+                                font-size: 16px;
+                                color: #000;
+                                // line-height: 19px;
+                            }
+
+                            strong {
+                                font-weight: bold;
+                                color: #000;
+                            }
+
+                            margin-bottom: 68px;
+
+                            @include breakpoints(0px, ipad) {
+                                margin-bottom: 30px;
+                            }
+
+                        }
+                    }
+
+                    a {
+                        border: 1px solid black;
+                        width: 250px;
+                        height: 56px;
+                        line-height: 56px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: black;
+
+                        &:hover {
+                            background-color: red;
+                            color: white;
+                        }
+                    }
+                }
+
+                .cta-container {
+                    display: flex;
+                    justify-content: center;
+
+                    @include breakpoints(0px, ipad) {
+                        flex-direction: column;
+                        margin-top: 0;
+                        margin-bottom: 2rem;
+                    }
+
+                    a {
+
+                        border: 1px solid black;
+                        width: 250px;
+
+                        @include breakpoints(0px, ipad) {
+                            width: auto;
+                            margin: .5rem 1rem;
+                        }
+
+                        height: 56px;
+                        line-height: 56px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color:black;
+                        margin: 0px 25px 60px;
+                        text-align: center;
+
+                        &:hover {
+                            background-color: red;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .container {
+            .text {
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 24px;
+                text-align: center;
+                max-width: 965px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 60px;
+
+                @include breakpoints(0px, ipad) {
+                    margin-bottom: 50px;
+                }
+
+            }
+
+            .section-title {
+                font-size: 32px;
+                line-height: 38px;
+
+                @include breakpoints(0px, ipad) {
+                    font-size: 31px !important;
+                    line-height: 34px !important;
+                }
+
+                color: #000;
+                font-weight: 700;
+                text-align: center;
+                margin-bottom: 70px;
+
+                @include breakpoints(0px, ipad) {
+                    margin-bottom: 50px;
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+
+                &.thank {
+                    margin-bottom: 30px;
+                }
+
+            }
+
+            .blocks {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-align: center;
+
+                @include breakpoints(0px, ipad) {
+                    flex-direction: column;
+                }
+
+                .card {
+                    max-width: 550px;
+
+                    .card-image {
+                        img {
+                            object-fit: cover;
+                            width: 100%;
+                            height: 367px;
+                        }
+                    }
+
+                    @include breakpoints(0px, ipad) {
+                        margin-bottom: 50px;
+                    }
+
+                    .card-container {
+                        h3 {
+                            font-size: 24px;
+                            line-height: 28px;
+                            font-weight: 700;
+                            margin-top: 60px;
+                            margin-bottom: 9px;
+                            color: #000;
+
+                            @include breakpoints(0px, ipad) {
+                                font-size: 18px;
+                                line-height: 21px;
+                                margin-top: 30px;
+                                margin-bottom: 30px;
+                            }
+                        }
+
+                        p {
+                            font-size: 16px;
+                            color: #000;
+                            // line-height: 19px;
+                        }
+
+                        strong {
+                            font-weight: bold;
+                            color: #000;
+                        }
+
+                        margin-bottom: 68px;
+
+                        @include breakpoints(0px, ipad) {
+                            margin-bottom: 30px;
+                        }
+
+                    }
+                }
+
+                a {
+                    border: 1px solid black;
+                    width: 250px;
+                    height: 56px;
+                    line-height: 56px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: black;
+
+                    &:hover {
+                        background-color: red;
+                        color: white;
+                    }
+                }
+            }
+
+            .cta-container {
+                display: flex;
+                justify-content: center;
+
+                @include breakpoints(0px, ipad) {
+                    flex-direction: column;
+                    margin-top: 0;
+                    margin-bottom: 2rem;
+                }
+
+                a {
+
+                    border: 1px solid black;
+                    width: 250px;
+
+                    @include breakpoints(0px, ipad) {
+                        width: auto;
+                        margin: .5rem 1rem;
+                    }
+
+                    height: 56px;
+                    line-height: 56px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color:black;
+                    margin: 0px 25px 60px;
+                    text-align: center;
+
+                    &:hover {
+                        background-color: red;
+                        color: white;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .column_block_plain {
+        padding: 60px 0 76px;
+        color: #000;
+
+        @include breakpoints(0px, ipad) {
+            padding: 20px 0 30px;
+        }
+
+        background-image: url(img/bottom-border.png);
+        background-position-y: bottom;
+        background-position-x: center;
+        background-repeat: no-repeat;
+
+        .container {
+            .section-title {
+                font-size: 32px;
+                line-height: 38px;
+                color: #000;
+                font-weight: 700;
+                text-align: center;
+                margin-bottom: 55px;
+
+                @include breakpoints(0px, ipad) {
+                    margin-bottom: 40px;
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+
+            }
+
+            .blocks {
+                display: flex;
+
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+
+                .card {
+                    max-width: calc(100% / 3);
+                    box-sizing: content-box;
+                    border: 1px solid #EBEBEB;
+                    padding: 25px;
+                    height: 252px;
+                    //   flex-basis: 25%;
+                    box-sizing: border-box;
+                    margin: 0 -1rem;
+
+                    @include breakpoints(0px, ipad) {
+                        max-width: 100%;
+                        margin: 1rem auto;
+                        height: auto;
+                        margin-bottom: 1rem;
+
+                        &:nth-child(odd) {
+                            margin-right: 0.25rem;
+                        }
+
+                        &:nth-child(even) {
+                            margin-left: 0.25rem;
+                        }
+
+                    }
+
+                    border-bottom: none;
+                    box-shadow: 0px 9px 10px -7px #587b83b8,
+                    -1px 50px 47px 50px rgba(0, 0, 0, 0);
+
+                    .card-container {
+                        h3 {
+                            font-size: 24px;
+                            line-height: 28px;
+                            font-weight: 700;
+                            color: #000;
+
+                            @include breakpoints(0px, ipad) {
+                                font-size: 18px;
+                                line-height: 21px;
+                            }
+
+                        }
+
+                        p {
+                            font-size: 16px;
+                            color: #000;
+                            // line-height: 19px;
+                        }
+
+                        strong {
+                            font-weight: bold;
+                        }
+
+                    }
+                }
+
+            }
+
+            .cta-container {
+                display: flex;
+                justify-content: center;
+
+                @include breakpoints(0px, ipad) {
+                    flex-direction: column;
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                }
+
+                a {
+                    border: 1px solid black;
+                    width: 250px;
+
+                    @include breakpoints(0px, ipad) {
+                        width: auto;
+                        margin: .5rem 1rem;
+                    }
+
+                    height: 56px;
+                    line-height: 56px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color:black;
+                    margin: 55px 25px;
+                    text-align: center;
+
+                    &:hover {
+                        background-color: red;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.accordions {
+    // margin-bottom: 2rem;
+    padding: 25px 0 100px;
+
+    @include breakpoints(0px, ipad) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .section-title {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .section-text {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    dt {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #000;
+
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            color: #000;
+
+            &.active {
+                .plus {
+                    display: none;
+                }
+
+                .minus {
+                    display: block;
+                }
+            }
+
+            .plus {
+                display: block;
+            }
+
+            .minus {
+                display: none;
+            }
+        }
+
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #DAE2E7;
+        margin-top: 0.5rem;
+    }
+
+    dd {
+        color: #000;
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+        // height: 0;
+        overflow: hidden;
+
+        box-sizing: content-box;
+
+        // &.shown{
+        //     height: 100%;   
+        // }
+        // &.hide-me{
+        //     height: 0;
+        //     display: block;
+        //     transition: all .5s ease-in;
+        // }
+
+        p {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+footer {
+    .uk-width-expand {
+        @include breakpoints(0px, ipad) {
+            width: 100% !important;
+            min-width: auto;
+            flex: unset;
+        }
+    }
+}
+
+.footer-awards {
+    ul {
+        @include breakpoints(0px, ipad) {
+            text-align: center;
+
+            li {
+                &:last-child {
+                    width: auto !important;
+                }
+            }
+        }
+    }
+}
+
+.sidepanel {
+    @include breakpoints(0px, ipad) {
+        padding-top: 210px !important;
+    }
+}
+
+.page-id-3566 .container-fluid .row {
+    background-image: none;
+    background-color: #F0F5F8;
+
+    .container {
+        max-width: 965px !important;
+        width: auto;
+
+        @media (min-width: 1024px) {
+            max-width: 965px;
+            width: auto;
+        }
+    }
+}
+
+.container-fluid.default-container.banner.uk-background-cover {
+    &.sanelo-popup-form-banner {
+        background-image: none !important;
+    }
+
+}
+
+.banner-container {
+
+    &.sanelo-popup-form {
+        background-image: none;
+        width: 900px;
+        padding: 3rem 0;
+
+        #movedate,
+        #movedate2,
+        #movedate3 {
+            max-width: 100%;
+        }
+
+        .bedrooms_sel {
+            display: flex;
+            justify-content: space-around;
+
+            .zf-multiAttType {
+                width: 300px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                @include breakpoints(0px, ipad) {
+                    width: 110px;
+
+                    &:last-child {
+                        margin-right: auto;
+                    }
+                }
+            }
+
+            @include breakpoints(0px, ipad) {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+        }
+
+        .form-group {
+            @include breakpoints(0px, ipad) {
+                margin-bottom: 24px !important;
+            }
+        }
+
+        label.zf-labelName {
+            display: none;
+        }
+
+        .nxtprev_but {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            a#prevBtn {
+                padding: 10px 20px 10px;
+                border-radius: 0;
+                border: 1px solid;
+                width: 138px;
+
+
+            }
+
+            a#prevBtn {
+                @include breakpoints(0px, ipad) {
+                    width: auto;
+                    height: 44.4px;
+                    margin-right: 1rem;
+                }
+            }
+
+            #nextBtn {
+                @include breakpoints(0px, ipad) {
+                    width: auto;
+
+                    margin-left: 1rem;
+
+                    @include breakpoints(0px, ipad) {
+                        padding: 10px 20px !important;
+                    }
+                }
+            }
+
+            input.btn.btn-success {
+                @include breakpoints(0px, ipad) {
+                    padding: 10px 20px !important;
+                }
+            }
+        }
+
+        #fewbox_txt {
+            width: 100%;
+        }
+
+        .confirmation {
+            width: 100%;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .check-container {
+                display: flex;
+
+                input[type=checkbox] {
+                    width: auto;
+                }
+
+                margin-bottom: 30px;
+            }
+
+        }
+
+        label#DecisionBox-error {
+            margin-top: 43px;
+            position: absolute;
+
+            @include breakpoints(0px, ipad) {
+                margin-top: 120px;
+            }
+        }
+
+    }
+
+}
+
+.cancel-button {
+    @include breakpoints(0px, ipad) {
+        margin-right: 1rem;
+    }
+
+
+}

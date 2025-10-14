@@ -1,0 +1,204 @@
+@media screen{
+	.main-header, .top-header{
+		nav{
+			.uk-navbar-nav{
+				> li{
+					> a{
+						font-family: $font-main-regular;
+						font-size: 16px;
+					    font-weight: bold;
+					    font-style: normal;
+					    font-stretch: normal;
+					    line-height: 1.5;
+					    letter-spacing: normal;
+					    text-align: center;
+					    color: #ffffff;
+					    text-transform: initial;
+					    height: 64px;
+					}
+					&:hover, &.current-menu-parent{
+						> a{
+							color: #ed1c24;
+						}
+					}
+					&.primary{
+						> a{
+							background-color: #fff;
+							border: solid 2px transparent;
+						    color: #000;
+						    height: 40px;
+						    margin-top: 14px;
+						}
+						&:hover{
+							> a{
+								background-color: #000000;
+    							border-color: #ffffff;
+    							color: #fff;
+							}
+						}
+					}
+					.sub-menu{
+						position: fixed;
+					    background-color: #000;
+					    z-index: 9999;
+					    left: 0;
+					    right: 0;
+					    list-style-type: none;
+					    height: 0px;
+					    margin-top: 27px;
+					    display: flex;
+    					justify-content: center;
+    					transition-timing-function: cubic-bezier(0.42,0,0.58,1);
+						@include transition(0.5s);
+						> li{
+							width: 270px;
+							text-align: center;
+							margin-top: 24px;
+						    padding-top: 24px;
+						    padding-bottom: 30px;
+						    visibility: hidden;
+						    position: relative;
+						    opacity: 0;
+							> a{
+								font-family: $font-main-regular;
+								color: #fff;
+							    height: 100%;
+							    position: absolute;
+							    bottom: 0;
+							    display: block;
+							    text-align: center;
+							    width: 100%;
+							    padding-top: 121px;
+							}
+							&.sf-icons{
+								&:before{
+									font-size: 50px;
+									color: #fff;
+									display: block;
+								}
+							}
+							&:hover, &.current-menu-item{
+								&.sf-icons{
+									&:before{
+										color: #ed1c24;
+									}
+								}
+								> a{
+									color: #ed1c24;
+								}
+							}
+						}
+					}
+					&.menu-item-has-children{
+						@include transition(0.5s);
+						&:hover{
+							.sub-menu{
+								height: 200px;
+								li{
+									opacity: 1;
+									visibility: visible;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.main-header{
+		background-color: #fff;
+		padding-top: 17px;
+		padding-bottom: 17px;
+		nav{
+			.uk-navbar-nav{
+				> li{
+					> a{
+						color: #000000;
+					}
+				}
+			}
+		}
+	}
+	.top-header{
+		background-color: #000;
+	}
+	.footer{
+		padding-top: 48px;
+		padding-bottom: 24px;
+		.social-media{
+			padding-top: 24px;
+			a{
+				font-size: 26px;
+			    color: #fff;
+			    margin-right: 8px;
+			}
+		}
+		h5{
+			font-size: 16px;
+		    font-weight: bold;
+		    font-style: normal;
+		    font-stretch: normal;
+		    line-height: 1.5;
+		    letter-spacing: normal;
+		    text-align: left;
+		    color: #fff;
+		    margin-top: 0;
+		    text-transform: uppercase;
+		}
+		div[class^="menu-"]{
+			display: inline-block;
+			ul{	
+				padding-left: 0;
+				list-style: none;
+				li{
+					a{	
+						display: block;
+					    font-size: 15px;
+					    font-weight: normal;
+					    font-style: normal;
+					    font-stretch: normal;
+					    line-height: 1.5;
+					    letter-spacing: normal;
+					    text-align: left;
+					    white-space: nowrap;
+					    float: left;
+					    clear: both;
+					    text-decoration: none;
+					    &:hover{
+					    	color: #fff;
+					    }
+					}
+				}
+			}
+		}
+		.footer-menu{
+			padding-bottom: 21.5px;
+		}
+		.outer-footer{
+			padding-top: 24px;
+			border-top: solid 1px #aeb9bf;
+			li{
+				position: relative;
+				padding-right: 2px;
+				&:after{
+					content: "l";
+					display: block;
+					color: #aeb9bf;
+					font-size: 17px;
+				    position: absolute;
+				    right: -6px;
+				    top: -1px;
+				    font-size: 23px;
+				}
+				a{
+					color: #aeb9bf;
+					&:hover{
+						color: #aeb9bf!important;
+						text-decoration: underline!important;
+					}	
+				}
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,32 @@
+/*
+Theme Name: Custom Child Theme - Consumer
+Theme URI: 
+Author: Jan Velasco for Santa Fe Relocation
+Template: custom-theme
+Description: Wordpress Child Theme
+Version: 1.0
+License: 
+License URI: 
+Tags:
+*/
+
+.map-banner .outer .details>div:first-child {
+    display: none !important;
+  
+}
+
+.page-id-9744 .dest-module{
+	padding-top:0 !important;
+	padding-bottom:0 !important;
+}
+@media (max-width: 767px){
+	.page-id-9744 .dest-module{
+		margin-bottom:60px;
+	}
+	.page-template-template-corporate .content-block{
+		padding-top:0 !important;
+	}
+}
+.table{
+	border: 1px solid #ddd !important;
+}

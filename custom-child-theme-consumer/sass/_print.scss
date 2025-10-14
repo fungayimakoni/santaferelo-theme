@@ -1,0 +1,39 @@
+@media print{
+	img,
+	header,
+	footer,
+	form,
+	figure,
+	aside,
+	iframe,
+	.year.slick-slider
+	{
+		display: none !important;
+	}
+
+	/* This Removes the URL of anchor tag but retain the text */
+	a[href]:after {
+		content: none !important;
+	}
+
+	.wrapper-holder{
+		min-height: 10px !important;
+		margin-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+	div{
+		height: auto !important;
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+
+	.page-template-template-partners{
+		.sidebar{
+			display: none!important;
+		}
+		.uk-grid{
+			display: block!important;
+		}
+	}
+}
+

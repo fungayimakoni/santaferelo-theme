@@ -1,0 +1,270 @@
+<?php get_header();
+	echo '<section class="main-layout inner-page-layout">';
+		echo '<div class="container-fluid default-container">';
+			echo '<div class="row">';
+				if (get_field('banner')):
+					$banner = get_field('front_banner');
+					if ( $banner['banner_image'] ):
+						echo '<div class="page-banner">';
+
+							echo '<div class="banner-wrapper">';
+								echo '<div class="container banner-content">';
+								if ( $banner['banner_title'] || $banner['banner_description'] || $banner['banner_button'] ):
+									echo '<div class="col-xs-4">';
+										echo '<div class="uk-position-center">';
+											echo ( $banner['banner_title'] ? "<h1><span>".$banner['banner_title']."</span></h1>" : "");
+											echo ( $banner['banner_description'] ? "<p>".$banner['banner_description']."</p>" : "" );
+											foreach( $banner['banner_button'] as $item ):
+												echo ( $item['item'] ? "<a href='".( $item['item']['url'] )."' target='".$item['item']['target']."' class='button primary'>".$item['item']['title']."</a>" : "" );
+											endforeach;
+										echo '</div>';
+									echo '</div>';
+								endif;
+								echo '</div>';
+
+								echo '<div class="banner-image ';
+								if ( $banner['banner_title'] || $banner['banner_description'] || $banner['banner_button'] ):
+									echo 'banner-meta';
+								endif;
+								echo '" style="background-image:url('. ( $banner['banner_image']['url'] ?  $banner['banner_image']['url'] : "none") . ')">';
+
+								echo '</div>';
+							echo '</div>';
+
+							echo '<div class="d-md-none d-block">';
+								echo '<div class="container banner-content1">';
+								if ( $banner['banner_title'] || $banner['banner_description'] || $banner['banner_button'] ):
+									echo ( $banner['banner_title'] ? "<h1>".$banner['banner_title']."</h1>" : "");
+											echo ( $banner['banner_description'] ? "<p>".$banner['banner_description']."</p>" : "" );
+											foreach( $banner['banner_button'] as $item ):
+												echo ( $item['item'] ? "<a href='".( $item['item']['url'] )."' target='".$item['item']['target']."' class='button primary'>".$item['item']['title']."</a>" : "" );
+											endforeach;
+								endif;
+								echo '</div>';
+							echo '</div>';
+						echo '</div>';
+					endif;
+				endif;
+				if( get_field('multi_color_content') ):
+					echo '<div class="multi-color-content">';
+						echo '<div class="container">';
+							echo get_field('multi_color_content');
+						echo '</div>';
+					echo '</div>';
+				endif;
+				if( get_field('front_page-numbers') || get_field('block_content') ):
+					echo '<div class="gray">';
+						if( get_field('front_page-numbers') ):
+				        	echo '<div class="header-subheader-repeater">';
+				        		echo '<div class="container">';
+				        			$block = get_field( 'front_page-numbers');
+			        				echo ( $block['front_page-numbers']['section_title'] ? "<h3>".$block['front_page-numbers']['section_title']."</h3>" : "" );
+			        				echo ( $block['front_page-numbers']['section_description'] ? "<p>".$block['front_page-numbers']['section_description']."</p>" : "" );
+			        				if ( $block['front_page-numbers']['items'] ):
+			        					echo '<div class="uk-grid-match" uk-grid>';
+					        				foreach ( $block['front_page-numbers']['items'] as $item ):
+					        					echo '<div class="uk-width-expand">';
+					        						echo '<div class="bordered" '.( $item['header_color'] ? 'style="border-bottom: 5px solid; border-color:'.$item['header_color'].'"' : '' ).'>';
+						        						echo ( $item['header'] ? "<div class='number odometer' ".( $item['header_color'] ? "style='color:".$item['header_color']."; border-color:".$item['header_color']."'" : "" )." data-target=".$item['header'].">".floor( $item['header']*0.85 )."</div>" : "" );
+						        						echo ( $item['sub_header'] ? "<div class='sub-header'>".$item['sub_header']."</div>" : "" );
+						        					echo '</div>';
+					        					echo '</div>';
+					        				endforeach;
+					        			echo '</div>';
+				        			endif;
+				        		echo '</div>';
+				        	echo '</div>';
+				        endif;
+				        if( get_field('block_content') ):
+				        	echo '<div class="block-content">';
+				        		echo '<div class="container">';
+				        			$block = get_field('block_content');
+		        					echo '<div class="uk-grid-match" uk-grid>';
+				        				foreach ( $block as $item ):
+				        					echo '<div class="uk-width-expand">';
+				        						echo '<div class="colored">';
+					        						echo ( $item['title'] ? "<h3>".$item['title']."</h3>" : "" );
+					        						echo ( $item['content'] ? "<div class='content'>".$item['content']."</div>" : "" );
+					        					echo '</div>';
+				        					echo '</div>';
+				        				endforeach;
+				        			echo '</div>';
+				        		echo '</div>';
+				        	echo '</div>';
+				        endif;
+				    echo '</div>';
+				endif;
+				if( get_field('relocation_services') ):
+		        	$relocation =  get_field('relocation_services');
+		        	echo '<div class="relocation-services">';
+			        	//pre($relocation['moving']);
+		        		if( $relocation['title'] ||  $relocation['description'] ):
+				        	echo '<div class="container">';
+				        		if( $relocation['title'] ):
+				        			echo '<h3>'.$relocation['title'].'</h3>';
+				        		endif;
+				        		if( $relocation['description'] ):
+				        			echo '<div>';
+					        			echo $relocation['description'];
+					        		echo '</div>';
+				        		endif;
+				        	echo '</div>';
+				        endif;
+				        if( $relocation['moving'] || $relocation['corporate'] ):
+				        	echo '<div class="main-tab">';
+								echo '<div class="tab-component">';
+									echo '<div class="container">';
+										echo '<ul uk-tab="connect: #my-id">';
+											if ( $relocation['moving'] ):
+												echo '<li><a href="#">Moving home</a></li>';
+											endif;
+											if ( $relocation['corporate'] ):
+												echo '<li><a href="#">Corporate relocation</a></li>';
+											endif;
+										echo '</ul>';
+									echo '</div>';
+								echo '</div>';
+								echo '<div style="background-color:'.$relocation['section_background']['value'].';">';
+									echo '<div class="container uk-margin">';
+										echo '<ul id="my-id" class="uk-switcher">';
+											if ( $relocation['moving'] ):
+												echo '<li>';
+													echo '<div class="uk-child-width-1-3@m uk-child-width-1-4@l uk-grid-small uk-grid-match" uk-grid>';
+														foreach ( $relocation['moving'] as $item ):
+															echo '<div class="uk-card">';
+																echo '<a href="'.get_permalink( $item->ID ).'">';
+																	echo '<div class="cards-bg">';
+																		echo '<div class="uk-card-media-top">';
+																			$banner = '';
+																			if( has_post_thumbnail( $item->ID ) ):
+																				$banner = get_the_post_thumbnail_url( $item->ID, 'custom');
+																			elseif( get_field('banner', $item->ID) ):
+																				$bannergroup = get_field('banner', $item->ID);
+																				$banner = $bannergroup['banner_image']['sizes']['custom'];
+																				if($bannergroup['banner_image'] === false ):
+																					$banner = '';
+																				endif;
+																			endif;
+																			echo '<div class="uk-background-cover" style="background-image: url('.$banner.');">';
+																			echo '</div>';
+																		echo '</div>';
+																		echo '<div class="uk-card-body">';
+																			echo '<p class="uk-text-bold">'.get_the_title($item->ID).'</p>';
+																			echo '<p class="exerpt">'.get_the_excerpt($item->ID).'</p>';
+																		echo '</div>';
+																	echo '</div>';
+																echo '</a>';
+															echo '</div>';
+														endforeach;
+													echo '</div>';
+												echo '</li>';
+											endif;
+											if ( $relocation['corporate'] ):
+												echo '<li>';
+													echo '<div class="uk-child-width-1-4@l uk-grid-small uk-grid-match" uk-grid>';
+														foreach ( $relocation['corporate'] as $item ):
+															echo '<div class="uk-card">';
+																echo '<a href="'.get_permalink( $item->ID ).'">';
+																	echo '<div class="cards-bg">';
+																		echo '<div class="uk-card-media-top">';
+																			$banner = '';
+																			if( has_post_thumbnail( $item->ID ) ):
+																				$banner = get_the_post_thumbnail_url( $item->ID, 'custom');
+																			elseif( get_field('banner', $item->ID) ):
+																				$bannergroup = get_field('banner', $item->ID);
+																				$banner = $bannergroup['banner_image']['sizes']['custom'];
+																				if($bannergroup['banner_image'] === false ):
+																					$banner = '';
+																				endif;
+																			endif;
+																			echo '<div class="uk-background-cover" style="background-image: url('.$banner.');">';
+																			echo '</div>';
+																		echo '</div>';
+																		echo '<div class="uk-card-body">';
+																			echo '<p class="uk-text-bold">'.get_the_title($item->ID).'</p>';
+																			echo '<p class="exerpt">'.get_the_excerpt($item->ID).'</p>';
+																		echo '</div>';
+																	echo '</div>';
+																echo '</a>';
+															echo '</div>';
+														endforeach;
+													echo '</div>';
+												echo '</li>';
+											endif;
+										echo '</ul>';
+									echo '</div>';
+								echo '</div>';
+							echo '</div>';
+				        endif;
+		        	echo '</div>';
+		        endif;
+		        $block = get_field( 'multicolor-banner', 'option' );
+		        if ($block):
+			        echo '<div class="multicolor-banner" style="background-image: linear-gradient(80deg, '.$block['background_color_-_left'].', '.$block['background_color_-_right'].');">';
+	        			// pre( $block );
+		        		echo '<div class="container">';
+		        			echo '<div class="banner-logo">';
+	        					echo '<img src="'.$block['banner_logo']['url'].'">';
+	        				echo '</div>';
+	        				echo '<div class="banner-description">';
+	        					echo $block['banner_description'];
+	        				echo '</div>';
+	    				echo '</div>';
+		        	echo '</div>';
+		        endif;
+		        $block = get_field('get_touch_clone', 'option');
+		        if($block):
+		        	echo '<div class="icon-item" '.( $block['background_color'] ? 'style="background-color:'.$block['background_color'].'"' : '' ).'>';
+		        		echo '<div class="container">';
+		        			echo ( $block['section_title'] ? "<h3>".$block['section_title']."</h3>" : "" );
+	        				echo ( $block['section_description'] ? "<p>".$block['section_description']."</p>" : "" );
+		        			if ( $block['icon_item'] ):
+		        				echo '<div class="uk-grid-match" uk-grid>';
+				        			foreach ( $block['icon_item'] as $item ):
+				        				echo '<div class="uk-width-expand">';
+				        					if ( $item['border_color'] ):
+				        					echo '<div class="bordered" style="border-color:'.$item['border_color'].';">';
+				        					endif;
+					        					echo ( $item['icons'] ? '<div class="uk-inline icon-container"><div class="uk-position-center"><i class="'.$item['icons'].'"></i></div></div>' : '' );
+					        					echo '<div class="text_wrapper">';
+					        					echo ( $item['title'] ? '<p class="title">'.$item['title'].'</p>' : '' );
+					        					echo ( $item['description'] ? '<p class="description">'.$item['description'].'</p>' : '' );
+					        					echo ( $item['link'] ? '<a href="'.$item['link']['url'].'" target="'.( $item['link']['target'] ? "_blank" : "_self").'" class="icon-link">'.$item['link']['title'].'</a>' : '' );
+					        				if ( $item['border_color'] ):
+					        					echo '</div>';
+				        					echo '</div>';
+				        					endif;
+					        			echo '</div>';
+				        			endforeach;
+			        			echo '</div>';
+			        		endif;
+		        		echo '</div>';
+		        	echo '</div>';
+		        endif;
+		        if ( get_field('testimonial', 'option') ):
+	         		$review = get_field('testimonial', 'option');
+		        	echo '<div class="review">';
+		        		echo '<div class="container">';
+		        			if ( $review['reviews'] ):
+		        				echo '<div class="uk-grid-large" uk-grid>';
+				        			foreach (  $review['reviews'] as $item ):
+				        				echo '<div class="uk-width-expand">';
+				        					echo ( $item['review'] ? '<div class="testimonial">'.myTruncate2($item['review'],200).'</div>' : '' );
+				        					echo ( $item['name'] ? '<div class="client">'.$item['name'].'</div>' : '' );
+				        					echo ( $item['star_rating'] ? '<div id="rating"><span class="stars">'.$item['star_rating'].'</span></div>' : '' );
+					        			echo '</div>';
+				        			endforeach;
+			        			echo '</div>';
+			        		endif;
+			        		if ( $review['button'] ):
+			        			echo '<div class="review-button">';
+			        				echo ( $review['button'] ? '<a href="'.$review['button']['url'].'" target="'.( $review['button']['target'] ? "_blank" : "_self").'" class="icon-link secondary button">'.$review['button']['title'].'</a>' : '' );
+			        			echo '</div>';
+			        		endif;
+		        		echo '</div>';
+		        	echo '</div>';
+		        endif;
+			echo '</div>';
+		echo '</div>';
+	echo '</section>';
+get_footer(); ?> 

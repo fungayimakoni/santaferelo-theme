@@ -1,0 +1,108 @@
+// Inside `vendor` folder are sass files written by other dev that you want to re-used
+@import "vendor/aos";
+@import "vendor/animate";
+@import "vendor/hover";
+
+
+// Variables and mixins
+// ----------------------------------------------------
+@import "variables";
+@import "mixins";
+
+// Feel free to include other partials here e.g. (partials are named with _ prefix)
+// ----------------------------------------------------
+@import 'print';
+@import 'nav';
+@import 'archive';
+@import 'assets';
+@import 'page-layout';
+
+// Your styles goes here
+// ----------------------------------------------------
+// HEADER
+	@media screen{
+		.main-header{
+			background-color: $color-default;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			&.not-sticky{
+				position: relative;
+			}
+			.text-logo{
+				font-size: 24px;
+				color: $color-sytian;
+			}
+			.website-details{
+				margin-bottom: 10px;
+				& > span{
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+
+// FOOTER
+	@media screen{
+		.footer{
+			// position: absolute;
+			// bottom: 0;
+			// left: 0;
+			// right: 0;
+			z-index: 9;
+			background-color: $color-black;
+			color: $color-white;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			.copyright{
+				margin-bottom: 10px;
+				text-align: center;
+			}
+			a{
+				color: #fff;
+			}
+			.social{
+				margin-bottom: 10px;
+				text-align: center;
+				font-size: 16px;
+				color: $color-white;
+				a{
+					padding-left: 4px;
+					padding-right: 4px;
+				}
+			}
+			.sytian-logo{
+				text-align: center;
+				a{
+					color: #fff;
+				}
+			}
+		}
+	}
+	@media (min-width: 768px){
+		.footer{
+			.copyright{
+				text-align: left;
+				margin-bottom: 10px;
+			}
+			.social{
+				margin-bottom: 0;
+				text-align: left;
+				a{
+					padding-left: 0;
+					padding-right: 8px;
+				}
+			}
+			.sytian-logo{
+				text-align: right;
+			}
+		}
+	}
+
+// ASIDE
+	@media screen{
+		aside{
+			.widget-title{
+				margin-top: 15px;
+			}
+		}
+	}

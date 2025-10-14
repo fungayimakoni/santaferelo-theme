@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="24px" viewBox="0 0 29 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>trustpilot-star</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="88.839362%" x2="100%" y2="10.0835249%" id="linearGradient-1">
+            <stop stop-color="#A2238E" offset="0%"></stop>
+            <stop stop-color="#4D2079" offset="23.0062319%"></stop>
+            <stop stop-color="#005AAA" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Reviews" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="T-Reviews" transform="translate(-48.000000, -212.000000)">
+            <g id="Group-13">
+                <rect id="Rectangle-8" fill="0 0 0 0" x="0" y="0" width="768" height="588"></rect>
+                <g id="Group-14" transform="translate(43.000000, 24.000000)" fill-rule="nonzero">
+                    <g id="Group" transform="translate(5.000000, 188.000000)">
+                        <g id="trustpilot-star">
+                            <polygon id="Shape" fill="#11AA73" points="0 0 23.91 0 23.91 23.91 0 23.91"></polygon>
+                            <path d="M11.97,16.17 L15.6,15.21 L17.13,19.92 L11.97,16.17 Z M20.34,10.08 L13.92,10.08 L11.94,3.99 L9.96,10.08 L3.54,10.08 L8.73,13.86 L6.75,19.95 L11.94,16.2 L15.15,13.86 L20.34,10.08 Z" id="Shape" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

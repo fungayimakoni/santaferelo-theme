@@ -1,0 +1,355 @@
+// MOBILE MENU
+  @media screen{
+    .mobile-menu-btn{
+      padding: 0px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover{
+        span{
+          color: #333;
+        }
+      }
+      span{
+        cursor: pointer;
+        font-size: 24px;
+        line-height: normal;
+        @include transition(0.4s);
+      }
+    }
+    // SIDEPANEL
+    .sidepanel {
+      background-color: $color-black;
+      left: -300px;
+      bottom: 0;
+      overflow: auto;
+      padding: 0px;
+      position: fixed;
+      top: 0;
+      width: 300px;
+      z-index: 999999;
+      transition: all 0.3s ease 0s;
+      .header{
+        border-bottom: 1px solid #fff;
+          padding: 10px;
+          text-align: right;
+          .mobile-menu-btn{
+            background: transparent;
+            cursor: pointer;
+            margin-top: 0;
+            span{
+              color: $color-white;
+              font-size: 16px;
+            }
+          }
+      }
+      .menu{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        & > li{
+          position: relative;
+          cursor: pointer;
+          & > a{
+            padding: 5px 15px;
+            font-size: 14px;
+            color: $color-white;
+            width: 100%;
+          }
+          // &:hover{
+          //   background-color: $color-white;
+          //   & > a{
+          //     color: $color-white;
+          //   }
+          //   .nav-control{
+          //     color: $color-white;
+          //   }
+          // }
+          &.current-menu-item,
+          &.current-menu-ancestor{
+            background-color: $color-white;
+            & > a{
+              color: $color-black;
+            }
+            .nav-control{
+              color: $color-black;
+            }
+          }
+          &:focus, &:active{
+            background-color: $color-white;
+            color: $color-black;
+          }
+          &.open{
+            & > a, .nav-control{
+              color: $color-black;
+            }
+            .nav-control{
+              &::before{
+                content: '\f068';
+              }
+            }
+          }
+          .nav-title{
+            width: 90%;
+            display: inline-block;
+          }
+          .nav-control{
+            color: $color-white;
+            width: 10%;
+            text-align: right;
+            padding-right: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+          }
+        }
+        &:hover{
+          & > li{
+            background-color: transparent;
+            & > a{
+              color: $color-white;
+            }
+            &.current_page_item,
+            &.current-menu-ancestor{
+              background-color: transparent;
+              & > a{
+                color: $color-white;
+              }
+              .nav-control{
+                color: $color-white;
+              }
+            }
+            &:hover{
+              background-color: $color-white;
+              & > a{
+                color: $color-black;
+              }
+              .nav-control{
+                color: $color-black;
+              }
+            }
+            &.open{
+              background-color: $color-white;
+              & > a{
+                color: $color-black;
+              }
+              .nav-control{
+                color: $color-black;
+              }
+            }
+            // &.current-menu-item,
+            // &.current-menu-ancestor{
+            //   &.open{
+            //     background-color: $color-white;
+            //     & > a{
+            //       color: $color-black;
+            //     }
+            //     .nav-control{
+            //       color: $color-black;
+            //     }
+            //   }
+            // }
+          }
+        }
+
+      }
+      .open{
+        background-color: $color-white;
+        & > a{
+          background-color: transparent;
+          color: $color-black;
+          &:hover{
+            background-color: transparent;
+            color: $color-white;
+          }
+        }
+        & > .dropdown-menu{
+          position: relative;
+          width: 100%;
+          border-radius: 0;
+          border: none;
+          box-shadow: none;
+          background-color: transparent;
+          margin: 0;
+          padding: 0;
+          background-color: $color-gray;
+        }
+      }
+      .sub-menu{
+        & > li{
+          & > a{
+            padding-right: 15px;
+          }
+        }
+        .sub-menu{
+          padding-left: 20px;
+          list-style: none;
+          & > li{
+            border-left: 5px solid #000;
+            padding-left: 10px;
+            & > a{
+              color: $color-black;
+              display: block;
+            }
+          }
+        }
+      }
+      // .sub-menu{
+      //   background-color: $color-gray;
+      //   border: none;
+      //   box-shadow: none;
+      //   display: inherit !important;
+      //   float: none;
+      //   font-size: inherit;
+      //   height: 0;
+        // margin: 0;
+      //   opacity: 0;
+        // padding: 0;
+      //   position: relative;
+      //   visibility: hidden;
+      //   transition: all 0.3s ease 0s;
+      //   li{
+      //     a{
+      //       font-size: 16px;
+      //       padding-left: 30px;
+      //     }
+      //   }
+      // }
+      // li{
+      //   a{
+      //     color: $color-black;;
+      //     display: block;
+      //     cursor: pointer;
+      //     font-size: 16px;
+      //     letter-spacing: 2px;
+      //     padding: 5px 15px;
+      //     text-decoration: none;
+      //     transition: all 0.3s ease 0s;
+      //     // & > span{
+      //     //   margin-top: 6px;
+      //     //   float: right;
+      //     // }
+      //     &:hover{
+      //       background-color: transparent;
+      //     }
+      //   }
+      // }
+      // .current_page_item,
+      // .current-menu-ancestor{
+      //   background-color: $color-gray;
+      //   a{
+      //   }
+      // }
+    }
+    .sidepanel-out{
+        left: 0;
+    }
+  }
+
+// DESKTOP MENU
+  @media (min-width: 1200px){
+    .top-header{
+      text-align: right;
+    }
+    .main-header{
+      .menu{
+        a{
+          font-size: 16px;
+          text-transform: uppercase;
+          color: $color-black;
+        }
+
+        // OPTIONS FOR SUB MENU
+        .sub-menu{
+          display: none;
+          list-style: none;
+          & > li{
+            position: relative;
+
+            // 3RD LEVEL OF SUB MENU
+            .sub-menu{
+              position: absolute;
+              right: 100%;
+              top: 0;
+              width: 100%;
+            }
+            &:hover{
+              .sub-menu{
+                display: block;
+              }
+            }
+          }
+        }
+
+        // MAIN MENU LIST
+        & > li{
+          display: inline-block;
+          margin-left: 20px;
+          position: relative;
+          &:hover{
+            & > a{
+              border-color: $color-gray;
+            }
+          }
+          & > a{
+            border-bottom: 5px solid transparent;
+          }
+
+          // NAVIGATION MENU ACTIVE STATE
+          &.current_page_item{
+            & > a{
+              border-color: $color-gray;
+            }
+          }
+
+          // LAYOUT FOR SUB MENU 2ND LEVEL
+          & > .sub-menu{
+            position: absolute;
+            left: 0;
+            width: 150px;
+            top: 100%;
+            text-align: left;
+            li{
+              a{
+                display: block;
+                background-color: $color-gray;
+                padding: 5px;
+                color: $color-black;
+                &:hover{
+                  background-color: $color-black;
+                  color: $color-white;
+                }
+              }
+            }
+          }
+
+          // DISPLAYING 3RD LEVEL SUB MENU
+          &:hover{
+            & > .sub-menu{
+              display: block;
+            }
+          }
+        }
+
+        // MAIN MENU HOVER EFFECT WHEN THE WHOLE MENU IS HOVERED
+        /*
+          This removes all the current active state and set the active to the current hovered item
+          instead so the user is not confused
+        */
+        &:hover{
+          & > li{
+            & > a{
+              border-color: transparent;
+            }
+            &:hover{
+              & > a{
+                border-color: $color-gray;
+              }
+            }
+          }
+        }
+      }
+      .desktop-menu{
+        text-align: right;
+      }
+    }
+  }

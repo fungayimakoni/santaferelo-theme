@@ -1,0 +1,15 @@
+@media print{
+	img,
+	header,
+	footer,
+	form,
+	figure,
+	aside{
+		display: none !important;
+	}
+
+	/* This Removes the URL of anchor tag but retain the text */
+	a[href]:after {
+		content: none !important;
+	}
+}

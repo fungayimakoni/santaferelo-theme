@@ -1,0 +1,16 @@
+<?php
+add_action('wp_enqueue_scripts', function(){
+    
+    if('offices'!=get_post_type()) return; 
+    $style_file = get_stylesheet_directory() .'/includes/dist/main.css';
+    
+    if(file_exists($style_file)){
+        wp_enqueue_style( 'new-style',get_stylesheet_directory_uri().'/includes/dist/main.css', [],null, 'all' );
+      
+    }
+    $js_file = get_stylesheet_directory() .'/includes/dist/main.js';
+    
+    if(file_exists($js_file)){
+        wp_enqueue_script( 'new-js', get_stylesheet_directory_uri().'/includes/dist/main.js', [], null, true );
+    }
+});

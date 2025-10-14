@@ -1,0 +1,35 @@
+/*.role-global_editor #publishing-action #publish, .role-global_editor #toplevel_page_wp-word-count, .role-global_editor #toplevel_page_twofas-light-menu, 
+.role-publisher  #toplevel_page_twofas-light-menu, 
+.role-publisher #toplevel_page_wp-word-count,
+.role-wpseo_manager  #toplevel_page_twofas-light-menu, 
+.role-wpseo_manager #toplevel_page_wp-word-count,
+.role-approver  #toplevel_page_twofas-light-menu, 
+.role-approver #toplevel_page_wp-word-count
+{
+	display: none;
+}*/
+.role-global_editor #publishing-action .button-primary{
+	float: inherit!important;
+}
+
+.role-local_editor #menu-posts-custom-guides, .role-local_editor #menu-posts-internations, .role-local_editor #toplevel_page_twofas-light-menu{
+	display: none;
+}
+.role-local_editor #wp-admin-bar-new-content,
+.role-wpseo_manager #wp-admin-bar-new-content,
+.role-global_editor #wp-admin-bar-new-content,
+.role-approver #wp-admin-bar-new-content{
+	display: none;
+}
+
+#publishing-action input {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+a[data-layout="moving_to_countries"],a[data-layout="virtual_survey_iframe"],a[data-layout="virtual_survey_thumb"],a[data-layout="corporate_reloaction_listing"],
+a[data-layout="column_listing"],a[data-layout="list-accordion"]{display:none!important;}
+
+#menu-posts-destination-guides .wp-submenu li:nth-child(-n+2), .nestedpages-listing-title .open-bulk-modal {display: none;}
+#tagsdiv-web_ctg{display: none;}
+#publish.button-primary-disabled + .button {color: #66c6e4 !important;background: #008ec2 !important;border-color: #007cb2 !important;box-shadow: none !important;text-shadow: 0 -1px 0 rgba(0,0,0,.1) !important;cursor: default;}

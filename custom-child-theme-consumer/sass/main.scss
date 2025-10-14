@@ -1,0 +1,28 @@
+// Variables and mixins
+// ----------------------------------------------------
+@import "mixins";
+@import "variables";
+@import 'vendor/uikit.min';
+@import 'vendor/slick';
+@import 'vendor/slick-theme';
+
+// Feel free to include other partials here e.g. (partials are named with _ prefix)
+// ----------------------------------------------------
+@import 'print';
+@import 'typography';
+
+@import 'nav';
+@import 'assets';
+@import 'page-layout';
+
+// Your styles goes here
+// ----------------------------------------------------
+
+// HEADER
+	@media screen{
+	}
+
+// FOOTER
+	@media screen{
+		
+	}

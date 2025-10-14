@@ -1,0 +1,90 @@
+.accordions{
+    &.component{
+        margin-top: 50px;
+        .title{
+            font-size: 24px;
+            line-height: 28px;
+        }
+        .text{
+            font-weight: bold;
+        }
+        .items{
+            padding-top:50px;
+            dt{
+                .title{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 16px;
+                    font-weight: 700;
+                    border-bottom: 1px solid #DAE2E7;
+                    padding-bottom: 5px;
+                    margin-bottom: 10px;
+                    color: #353C41;
+                    &.active,&:hover{
+                        cursor: pointer;
+                        color: #009DCA;
+                        >.expand-collapse{
+                            cursor: pointer;
+                            color: #009DCA;
+                        }
+                    }
+                    svg,.plus,.minus{
+                        // so no events in js level 
+                        pointer-events: none; 
+                    }
+      
+                }
+                &:last-of-type(.title){
+                    border-bottom: none;
+                }
+
+
+            }
+            .description{
+                // margin-bottom: 2rem;
+                max-height: 0;
+                &.shown{
+                    padding:1rem 0;
+                }
+                &.active{
+                    max-height: 100%;
+                }
+                overflow: hidden;
+                margin-left: 0px;
+                transition: max-height 0.2s ease-out;
+                box-sizing: content-box;
+                .director{
+                    display: flex;
+                    @include breakpoints(0px,ipad){
+                        flex-direction: column;
+                    }
+                    .picture{
+                     
+                        
+                        margin-right: 1rem;
+                        .director-img {
+                            object-fit: fill;
+                            width: 100%;
+                            height: 100%;
+                            max-width: 175px;
+                            min-height: 175px;
+                            // border: 5px solid transparent;
+                            border-radius: 100%;
+                            // box-shadow: 0 0 5px rgba(0,0,0,.5);
+                        }
+                    }
+                    .info{
+                       flex:1;
+                       display: flex;
+                       flex-direction: column;
+                       justify-content: center;
+                       .name{
+                           font-weight: 700;
+                       }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.sn-msg {
+    margin: 5px 0px;
+    font-size: 14px;
+    color: #fff;
+}
+
+p#sn-otp-msg {
+    position: absolute;
+    top: -20px;
+    margin: 0px;
+}
+
+.sn-pos-relative {
+    position: relative;
+}
+
+.sn-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #0e0e0e8f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.sn-loader img {
+    width: 50px;
+    height: 50px;
+}
+
+.d-none {
+    display: none;
+}
+
+#moveform .help-block {
+    margin: 10px 15px;
+}
+
+#moveform #DecisionBox-error {
+    margin: 5px 55px 0px;
+}
+
+
+.sn-form-disable-input:read-only,
+.sn-form-disable-input:disabled {
+    background: #eeeeee !important;
+}
+.sn-msg-link{
+    color: #69d3ff;
+    font-weight: 700;
+}
+#personal_information #otp_code-error{
+    display: none !important;
+}
+.sanelo-frontpage .banner-container #sizeofmove .bedrooms_sel .zf-multiAttType.zf-sf-aFewBox {
+	max-width: 175px;
+}
+
+@media screen and (max-width:576px) {
+    p#sn-otp-msg {
+        top: -20px;
+    }
+
+    .sn-msg {
+        font-size: 11px;
+    }
+
+    #moveform #DecisionBox-error {
+        margin: 5px 40px 0;
+    }
+}
+
+@media (max-width: 640px) {
+    #moveform .help-block {
+        top: 42px;
+        left: 16px;
+        margin: 10px 0px;
+    }
+}
+
+@media (max-width: 767px) {
+    #moveform .uk-modal-dialog .form-group {
+        margin-top: 25px;
+    }
+}

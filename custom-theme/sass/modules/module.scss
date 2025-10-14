@@ -1,0 +1,36 @@
+// BLOG ARCHIVE (module)
+	@media screen{
+		.blog_shortcode {
+			.blog-item{
+				padding-bottom: 15px;
+    			padding-top: 15px;
+				.post-item {
+				    border: 1px solid #ebebeb;
+				    padding-bottom: 15px;
+				    padding-top: 15px;
+				    .entry-wrap{
+				    	color: #525252;
+					    .h-recent-posts{
+					    	font-size: 16px;
+					    }
+					    .posts-excerpt{
+					    	font-size: 13px;
+					    	margin-top: 30px;
+					    }
+					    .latest-post-cat{
+					    	color: #24c15f;
+					    }
+					}
+				}
+			}
+		}
+	}
+
+// GALLERY
+	@media screen{
+		.module-albums{
+			.gallery-item{
+				margin-top: 30px;
+			}
+		}
+	}

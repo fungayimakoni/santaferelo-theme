@@ -1,0 +1,22 @@
+footer{
+    .container{
+        padding-right: 1rem;
+        padding-left: 1rem;
+        .footer-menu{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 1rem;
+            @include breakpoints(0px,ipad){
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .bottom-bar{
+            display: flex;
+            @include breakpoints(0px,ipad){
+            
+                flex-direction: column;
+            }
+        }
+    }
+}

@@ -1,0 +1,171 @@
+@media screen{
+	html, body{
+		font-family: $font-main-regular;
+		font-size: 16px;
+		line-height: 24px;
+		color: $color-default;
+	}
+
+	textarea:focus,
+	input:focus,
+	button:focus{
+	 	outline: none;
+	}
+	
+	h1, h2, h3, h4, h5, h6{
+		font-family: $font-main-regular;
+		font-weight: bold;
+		line-height: 1;
+		margin-top: 30px;
+    	margin: 24px 0px;
+		color: $color-default;
+		& ~ ul, & ~ ol{
+			margin-top: 15px;
+		}
+		& ~ p{
+			&:first-of-type{
+				margin-top: 15px;
+			}
+		}
+		& ~ h1, & ~ h2, & ~ h3, & ~ h4, & ~ h5, & ~ h6{
+			margin-top: 15px;
+		}
+		& ~ figure{
+			margin-top: 15px;
+		}
+		& ~ table{
+			margin-top: 15px;
+		}
+		& ~ blockquote{
+			margin-top: 15px;
+		}
+		& ~ .table-responsive{
+			margin-top: 15px;
+		}
+	}
+	p{
+		font-size: 16px;
+		margin-top: 0;
+    	margin-bottom: 1rem;
+		line-height: 24px;
+		&:first-of-type{
+			margin-top: 0;
+		}
+		& ~ ul, & ~ ol{
+			margin-top: 15px;
+		}
+		& ~ h1, & ~ h2, & ~ h3, & ~ h4, & ~ h5, & ~ h6{
+			margin-top: 15px;
+		}
+		& ~ figure{
+			margin-top: 15px;
+		}
+		& ~ table{
+			margin-top: 15px;
+		}
+		& ~ blockquote{
+			margin-top: 15px;
+		}
+	}
+	ul, ol{
+		margin: 0;
+		padding: 0;
+		& ~ ul, & ~ ol{
+			margin-top: 15px;
+		}
+		li{
+			p{
+				& ~ ul, & ~ ol{
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	img{
+		max-width: 100%;
+		height: auto;
+		display: inline-block;
+		img.img-responsive{
+			display: inline-block;
+		}
+	}
+	a{
+		outline: none !important;
+		text-decoration: none !important;
+		display: inline-block;
+		&:hover{
+			transition: all 0.3s ease 0s;
+		}
+	}
+	video{
+		max-width: 100%;
+	}
+	textarea{
+		resize: none;
+	}
+	hr{
+		border-color: $color-gray;
+	}
+	span{
+		display: inline-block;
+	}
+	figure{
+		img{
+			display: inline-block;
+			&.img-responsive{
+				display: inline-block;
+			}
+		}
+		& ~ p{
+			margin-top: 15px;
+			&:first-of-type{
+				margin-top: 15px;
+			}
+		}
+	}
+	blockquote{
+		border-color: $color-sytian;
+	}
+	table{
+		h1, h2, h3, h4, h5, h6{
+			margin-top: 0;
+		}
+	}
+
+	ul, ol{
+		padding-left: 20px;
+	}
+	h6{
+		font-size: 16px;
+	}
+	h5{
+		font-size: 18px;
+	}
+	h4{
+		font-size: 19px;
+		line-height: 1.42;
+	}
+	h3{
+		font-size: 24px;
+		line-height: 1.17;
+	}
+	h2{
+		font-size: 31px;
+	    line-height: 1.1;
+	}
+	h1{
+		font-size: 38px;
+		line-height: 1.11;
+	}
+	aside{
+		ul, ol{
+			list-style: none;
+			padding: 0;
+		}
+	}
+	.page-title{
+		margin-bottom: 15px;
+	}
+}
+
+

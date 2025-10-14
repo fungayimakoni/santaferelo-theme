@@ -964,7 +964,7 @@ body .top-header nav .uk-navbar-nav li.parent-active a:hover:after {
   max-width: 33.3333333333%;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-  border: 1px solid #EBEBEB;
+  border: 1px solid #EBEBEB !important;
   padding: 25px;
   height: 252px;
   -webkit-box-sizing: border-box;

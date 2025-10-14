@@ -209,7 +209,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   echo '</div>';
                 echo '</div>';
               echo '</div>';
-              echo '<div class="hidden-xs hidden-sm hidden-md col-lg-10 column-middle">';
+              echo '<div class="d-none d-lg-block col-lg-10 column-middle">';
                 echo '<div class="desktop-menu ">';
                   echo '<nav class="uk-navbar-container hidden-print uk-navbar-transparent" uk-navbar>';
                     echo '<div class="uk-navbar-right ">';

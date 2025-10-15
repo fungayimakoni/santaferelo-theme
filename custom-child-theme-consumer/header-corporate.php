@@ -321,7 +321,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   echo '</a>';
                 echo '</div>';
               echo '</div>';
-              echo '<div class="hidden-lg column-middle uk-position-center-right">';
+              echo '<div class="d-lg-none column-middle uk-position-center-right">';
                 echo '<div class="mobile-menu">';
                   echo '<div class="mobile-button-primary"></div>';
                   echo '<div class="mobile-menu-btn pull-right uk-position-center-right">';

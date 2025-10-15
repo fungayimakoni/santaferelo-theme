@@ -13,7 +13,7 @@ get_header( 'corporate');?>
 							<div class="banner-wrapper">
 								<div class="container banner-content">
 								<?php if ( $banner['banner_title'] || $banner['banner_description'] || $banner['banner_button'] ):?>
-									<div class="col-xs-4">
+									<div class="col-4">
 										<div class="uk-position-center">
                                             <?php
 											echo ( $banner['banner_title'] ? "<h1><span>".$banner['banner_title']."</span></h1>" : "");

@@ -147,7 +147,7 @@ span.stars span {
     margin-right: 0;
 }
 
-.col-xs-9 {
+.col-9 {
     padding-left: 0;
     padding-right: 0;
 }
@@ -394,7 +394,7 @@ p.p1 {
 
 
 
-    .page-banner .col-xs-4 {
+    .page-banner .col-4 {
         min-width: 286px;
     }
 

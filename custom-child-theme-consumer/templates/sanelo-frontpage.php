@@ -12,7 +12,7 @@ get_header('sanelo');?>
 	<?php if( $country_name == 'China' ):?>
 		<div class="page-banner china"><div class="banner-wrapper">
 			<div class="container banner-content">
-				<div class="col-xs-4">
+				<div class="col-4">
 					<div class="uk-position-center">
 						<h1><span>YOUR TRUSTED MOVING COMPANY</span></h1>
 						<p>Domestic and International Movers, we make your relocation journey easy!</p>

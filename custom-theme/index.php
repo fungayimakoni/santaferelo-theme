@@ -4,7 +4,7 @@ get_header(); ?>
 	<section class="main-layout inner-page-layout">
 		<div class="container default-container">
 			<div class="row">
-				<div class="col-xs-12"><?php the_content(); ?></div>
+				<div class="col-12"><?php the_content(); ?></div>
 			</div>
 		</div>
 	</section>

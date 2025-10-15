@@ -41,7 +41,7 @@
       <header class="main-header <?php echo( $opt_stickyTop == true ) ? 'not-sticky' : '';  ?>">
         <div class="container">
           <div class="row row-size">
-            <div class="col-xs-9 col-lg-3 column-middle">
+            <div class="col-9 col-lg-3 column-middle">
               <div class="main-logo">
                 <a href="<?php echo get_bloginfo('url'); ?>">
                   <?php
@@ -58,7 +58,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-xs-3 col-lg-9 column-middle">
+            <div class="col-3 col-lg-9 column-middle">
               <div class="mobile-menu hidden-lg">
                 <div class="mobile-menu-btn pull-right">
                   <span class="fa fa-bars"></span>

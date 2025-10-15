@@ -161,7 +161,7 @@
         echo '<header class="main-header">';
           echo '<div class="container">';
             echo '<div class="row">';
-              echo '<div class="col-xs-9 col-lg-2 column-middle">';
+              echo '<div class="col-9 col-lg-2 column-middle">';
                 echo '<div class="main-logo">';
                   echo '<a href="'.get_bloginfo('url').'">';
                     $image = get_field('main_header_logo', 'option');
@@ -169,7 +169,7 @@
                   echo '</a>';
                 echo '</div>';
               echo '</div>';
-              echo '<div class="col-xs-3 col-lg-10 column-middle">';
+              echo '<div class="col-3 col-lg-10 column-middle">';
               echo '</div>';
             echo '</div>';
           echo '</div>';

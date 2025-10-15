@@ -3,7 +3,7 @@
 		<h1 class="hidden">Page Not Found!</h1>
 		<article class="container">
 			<div class="row">
-				<div class="col-xs-12 text-center">
+				<div class="col-12 text-center">
 					<figure class="error-image">
 						<img src="<?php echo get_bloginfo('template_directory'); ?>/img/404-image.png" alt="404Image" class="img-responsive">
 					</figure>

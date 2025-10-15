@@ -192,7 +192,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         echo '<header class="main-header">';
           echo '<div class="container">';
             echo '<div class="row" style="position:relative;">';
-              echo '<div class="col-xs-9 col-lg-2 column-middle">';
+              echo '<div class="col-9 col-lg-2 column-middle">';
                 echo '<div class="main-logo">';
                   echo '<a href="'.get_bloginfo('url').'">';
                     $image = get_field('main_header_logo', 'option');

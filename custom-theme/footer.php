@@ -8,7 +8,7 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="row row-size">
-				<div class="col-xs-12 col-sm-6 column-middle">
+				<div class="col-12 col-sm-6 column-middle">
 					<?php
 						if( $opt_generalCopyright != '' ) :
 							echo '<div class="copyright">';
@@ -39,7 +39,7 @@
                     <?php endif; ?>
 				</div>
 
-				<div class="col-xs-12 col-sm-6 column-middle">
+				<div class="col-12 col-sm-6 column-middle">
 					<figure class="sytian-logo">
 						<a href="https://www.sytian-productions.com/" target="_blank">
 							Web Design Philippines

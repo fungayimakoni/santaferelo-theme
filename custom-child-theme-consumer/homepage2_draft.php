@@ -15,7 +15,7 @@ get_header();
 							echo '<div class="banner-wrapper">';
 								echo '<div class="container banner-content">';
 								if ( $banner['banner_title'] || $banner['banner_description'] || $banner['banner_button'] ):
-									echo '<div class="col-xs-4">';
+									echo '<div class="col-4">';
 										echo '<div class="uk-position-center">';
 											echo ( $banner['banner_title'] ? "<h1><span>".$banner['banner_title']."</span></h1>" : "");
 											echo ( $banner['banner_description'] ? "<p>".$banner['banner_description']."</p>" : "" );

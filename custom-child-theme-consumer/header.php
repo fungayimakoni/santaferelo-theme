@@ -106,7 +106,7 @@
         echo '<header class="main-header">';
           echo '<div class="container">';
             echo '<div class="row" style="position:relative;display:flex;align-items:center;">';
-              echo '<div class="col-xs-9 col-lg-2 column-middle">';
+              echo '<div class="col-9 col-lg-2 column-middle">';
                 echo '<div class="main-logo">';
 
                   $url = get_bloginfo('url');
